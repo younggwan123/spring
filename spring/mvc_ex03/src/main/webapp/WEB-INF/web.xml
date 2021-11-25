@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- DB관련된 설정 파일의 위치를 지정해주는 태그 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+	</context-param>
+	
+	<!-- 이벤트 발생시 작업을 처리하기위한 태그 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- 디스패처서블릿 등록 설정 태그 -->
+	<!-- 
+		디스패처서블릿이 (servlet-name)appServlet에서 설정이 된것이다.
+		(servlet-class)해당 디스패처서블릿의 위치(클래스)이다.
+		그래서 디스패처서블릿설정은 (param-value)/WEB-INF...에 있는
+		servlet-context.xml의 파일이 디스패처서블릿의 설정파일이 되는 것이다.
+		(load-on-startup) 1은 해당 디스패처서블릿이 첫번째로 실행된다는 의미이다
+	 -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- 
+		appServlet는 위의 별명을 지정하게 되는 것이며
+		url-pattern의 /는 , 사용자로 부터 요청이 들어오는 모든 값에 대해
+		디스패처서블릿으로 연결시켜주는 역할을 한다.
+	 -->
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+<filter>
+	<filter-name>encodingFilter</filter-name>
+	<filter-class>
+		org.springframework.web.filter.CharacterEncodingFilter     
+	</filter-class>
+	<init-param>
+		<param-name>encoding</param-name>   
+		<param-value>UTF-8</param-value>
+	</init-param>
+	<init-param>
+		<param-name>forceEncoding</param-name>  
+		<param-value>true</param-value>
+	</init-param>
+</filter> 
+<filter-mapping>
+	<filter-name>encodingFilter</filter-name>
+	<url-pattern>/*</url-pattern>                 
+</filter-mapping>
+</web-app>
+
+
+
+
+
+
