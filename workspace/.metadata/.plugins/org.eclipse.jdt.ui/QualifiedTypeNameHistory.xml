@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.care.root.STBean"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.care.root02.STBean"/>
+    <fullyQualifiedTypeName name="com.care.root.Student"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.care.car.Car"/>
+    <fullyQualifiedTypeName name="com.care.car.Controller01"/>
+    <fullyQualifiedTypeName name="com.care.car.SubClass"/>
+</qualifiedTypeNameHistroy>

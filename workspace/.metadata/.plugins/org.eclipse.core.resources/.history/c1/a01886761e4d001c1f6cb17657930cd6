@@ -1,0 +1,8 @@
+package com.care.di_test02;
+
+public class OperationClass {
+	private int operation(int n1, int n2, String op) {
+		
+		return 0;
+	}
+}

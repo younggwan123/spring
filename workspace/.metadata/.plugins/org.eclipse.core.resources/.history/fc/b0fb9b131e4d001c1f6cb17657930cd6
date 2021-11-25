@@ -1,0 +1,23 @@
+package com.care.di_test02;
+
+public class OperationClass {
+	private String print;
+	private PrintClass ps;
+	
+	public String getPrint() {
+		return print;
+	}
+	public void setPrint(String print) {
+		this.print = print;
+	}
+	public PrintClass getPs() {
+		return ps;
+	}
+	public void setPs(PrintClass ps) {
+		this.ps = ps;
+	}
+	public void pr() {
+		// TODO Auto-generated method stub
+		
+	}
+}

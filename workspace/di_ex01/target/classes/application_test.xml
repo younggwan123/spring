@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="ps" class="com.care.di_test.PrintString"></bean>
+	<bean id="ps1" class="com.care.di_test.PrintString"></bean>
+	<bean id="ps2" class="com.care.di_test.PrintString"></bean>
+	<bean id="ps3" class="com.care.di_test.PrintString"></bean>
+	<bean id="ps4" class="com.care.di_test.PrintString"></bean>
+	<bean id="pb" class="com.care.di_test.PrintBean">
+		<property name="ps" ref="ps" />
+		<property name="print" value="안녕하세요" />
+	</bean>
+</beans>

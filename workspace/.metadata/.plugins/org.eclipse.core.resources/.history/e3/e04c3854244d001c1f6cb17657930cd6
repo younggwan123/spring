@@ -1,0 +1,9 @@
+package com.care.car;
+
+public class MainClass {
+	public static void main(String[] args) {
+		Car car = new Controller01();
+		System.out.println("메인실행");
+		car.speed();
+	}
+}

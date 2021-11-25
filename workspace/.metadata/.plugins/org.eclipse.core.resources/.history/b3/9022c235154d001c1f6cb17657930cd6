@@ -1,0 +1,8 @@
+package com.care.root;
+
+public class STBean {
+	private String name;
+	private int age;
+	private Stubent st;
+	
+}
